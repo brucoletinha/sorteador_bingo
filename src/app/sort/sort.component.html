@@ -1,0 +1,20 @@
+<div class="page">
+  <div class="header">
+    <img class="icone-logo" src="./../../assets/images/Tribo_Icone.svg" alt="icone da tribo Corujas">
+    <span class="title">BINGO DAS CORUJAS</span>
+  </div>
+  <div class="content">
+    <span class="label-sort">A palavra sorteada é...</span>
+    <span class="word">{{ word }}</span>
+    <button class="sort-button" (click)="sort()">SORTEAR</button>
+    <div class="sorted-words">
+      <span class="sorted-words-label">Palavras Sorteadas</span>
+      <div class="sorted-words-container">
+        <ul class="already-sorted-list" *ngFor="let wordSorted of listaDosJaSorteados">
+          <!-- <img class="seta" src="./../../assets/images/seta-direita.svg" alt="seta pra direita"> -->
+          <li class="already-sorted-word">{{ wordSorted }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
